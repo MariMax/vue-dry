@@ -20,22 +20,15 @@
 </template>
 
 <script>
-import { toFixed } from "@/filters/to-fixed";
 import { mixin } from "@/mixins/mixin";
-import { intersection } from "@/directives/intersection-observer";
+
 export default {
   name: "HelloWorld",
   data: () => ({
     value: 10.443,
     squares: []
   }),
-  filters: {
-    toFixed
-  },
   mixins: [mixin],
-  directives: {
-    isInTheView: intersection
-  },
   mounted() {
     this.squares = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   },
